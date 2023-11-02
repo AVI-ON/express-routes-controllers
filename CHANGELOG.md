@@ -2,6 +2,7 @@
 
 ## 1.0.0
 
+- 💣 [BREAKING CHANGE] Package name is now @avi-on/express-routes-controllers
 - 💣 [BREAKING CHANGE] Package is now an ESM module
 - 💣 [BREAKING CHANGE] Update node version to hydrogen (18)
 - 💣 [BREAKING CHANGE] Rest.resource and Rest.resources are now async
