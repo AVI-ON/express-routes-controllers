@@ -71,6 +71,60 @@ describe('Resource', function () {
       });
     });
   });
+  
+  describe('Nested Resource Controller', function () {
+    beforeEach(function () {
+      this.request.options.url += 'folder/nested_folder_controller';
+    });
+
+    it('call index action', function (done) {
+      this.request.execute(function (error, response, body) {
+        expect(body.msg).toEqual('folder/nested_folder_controller/index');
+
+        done();
+      });
+    });
+
+    it('call create action', function (done) {
+      this.request.options.method = 'post';
+
+      this.request.execute(function (error, response, body) {
+        expect(body.msg).toEqual('folder/nested_folder_controller/create');
+
+        done();
+      });
+    });
+
+    it('call show action', function (done) {
+      this.request.options.url += '/123';
+      this.request.options.method = 'get';
+
+      this.request.execute(function (error, response, body) {
+        expect(body.msg).toEqual('folder/nested_folder_controller/show_123');
+        done();
+      });
+    });
+
+    it('call destroy action', function (done) {
+      this.request.options.url += '/123';
+      this.request.options.method = 'delete';
+
+      this.request.execute(function (error, response, body) {
+        expect(body.msg).toEqual('folder/nested_folder_controller/destroy_123');
+        done();
+      });
+    });
+
+    it('call update action', function (done) {
+      this.request.options.url += '/123';
+      this.request.options.method = 'put';
+
+      this.request.execute(function (error, response, body) {
+        expect(body.msg).toEqual('folder/nested_folder_controller/update_123');
+        done();
+      });
+    });
+  });
 
   describe('Changes default name', function () {
     describe('call with the new name', function () {

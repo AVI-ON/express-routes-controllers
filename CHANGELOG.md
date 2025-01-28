@@ -1,5 +1,9 @@
 # Express Routes Controllers logs
 
+## 2.0.0 [Release Fetiche]
+
+- chore: Added routes as folder when it doesn't have controller file.
+
 ## 1.0.0
 
 - 💣 [BREAKING CHANGE] Package name is now @avi-on/express-routes-controllers
