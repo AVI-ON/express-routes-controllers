@@ -22,11 +22,8 @@ export function update(req, res) {
     msg: `folder/nested_folder_controller/update_${req.params.nested_folder_controller_id}`,
   });
 }
-export function collection_action(req, res) {
-  res.json({ msg: 'folder/nested_folder_controller/collection_action' });
-}
-export function member_action(req, res) {
+export function nested_controller_member(req, res) {
   res.json({
-    msg: `folder/nested_folder_controller/member_action_${req.params.nested_folder_controller_id}`,
+    msg: `folder/nested_folder_controller/nested_controller_member_${req.params.nested_folder_controller_id}`,
   });
 }

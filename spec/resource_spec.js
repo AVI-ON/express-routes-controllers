@@ -124,6 +124,16 @@ describe('Resource', function () {
         done();
       });
     });
+    
+    it('call nested_controller_member action', function (done) {
+      this.request.options.url += '/123/nested_controller_member';
+      // this.request.options.method = 'get';
+
+      this.request.execute(function (error, response, body) {
+        expect(body.msg).toEqual('folder/nested_folder_controller/nested_controller_member_123');
+        done();
+      });
+    });
   });
 
   describe('Changes default name', function () {
