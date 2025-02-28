@@ -1,6 +1,6 @@
 # Express Routes Controllers logs
 
-## 2.0.0 [Release Fetiche]
+## 2.0.0 [Release Garompa]
 
 - chore: Added routes as folder when it doesn't have controller file.
 
