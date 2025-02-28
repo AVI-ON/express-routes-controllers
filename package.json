@@ -1,6 +1,6 @@
 {
   "name": "@avi-on/express-routes-controllers",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Creates routes for the controllers",
   "type": "module",
   "dependencies": {

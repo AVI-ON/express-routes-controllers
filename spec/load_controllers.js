@@ -142,5 +142,15 @@ export default async function (server) {
     collection: { put: ['update'] },
   });
 
+  await rest.resource('folder',
+    async () => {
+      await rest.resources('nested_folder_controller', {
+        member: {
+          get: ['nested_controller_member'],
+        },
+      })
+    }
+  )
+
   rest.mountRoutes(app);
 };
